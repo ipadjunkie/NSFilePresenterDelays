@@ -53,8 +53,6 @@
         }
         
         [stream close];
-        [presenter release];
-        [stream release];
     }
 }
 

@@ -29,7 +29,6 @@
 {
     [NSFileCoordinator removeFilePresenter:self];
     self.url = nil;
-    [super dealloc];
 }
 
 -(NSURL *)presentedItemURL
@@ -55,8 +54,6 @@
              NSLog(@"%@ took %.4f seconds to start writing", self.presentedItemURL, elapsed);
          writeBlock();
      }];
-    
-    [coord release];
     
     if (myErr)
     {
